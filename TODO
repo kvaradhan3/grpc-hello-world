@@ -1,0 +1,11 @@
+0.  This pattern in kubernetes is unclear and unpredictable:
+
+hello-world-client-77775898c-564lt    0/1     Completed          81         6h32m
+hello-world-client-77775898c-564lt    0/1     CrashLoopBackOff   81         6h33m
+hello-world-client-77775898c-564lt    0/1     Completed          82         6h38m
+hello-world-client-77775898c-564lt    0/1     CrashLoopBackOff   82         6h38m
+
+Why the constant CrashLoopBackoff?
+
+1. Explore context
+2. Attach grpc to other channels

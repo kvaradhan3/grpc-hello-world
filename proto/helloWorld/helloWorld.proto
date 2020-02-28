@@ -1,0 +1,20 @@
+syntax = 'proto3';
+package  helloWorld;
+
+import "google/protobuf/timestamp.proto";
+
+service HelloWorld
+{
+    rpc HelloWorld(Hello) returns (World) {}
+}
+
+message Hello {
+    google.protobuf.Timestamp send_time = 1;
+    string rqst = 2;
+}
+
+message World {
+    google.protobuf.Timestamp send_time = 1;
+    string resp = 2;
+    int32  cookie = 3;
+}

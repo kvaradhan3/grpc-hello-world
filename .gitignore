@@ -1,0 +1,10 @@
+*~
+#*
+.#*
+.*.sw*
+.DS_Store
+go.mod go.sum
+*.pb.go
+*.Linux
+server/server
+client/client

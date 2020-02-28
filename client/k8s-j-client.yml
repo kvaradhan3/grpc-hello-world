@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: dbload
+  labels:
+    app: world
+spec:
+  template:
+    spec:
+      containers:
+      - name: hello-client
+        image: kvaradha/hello-world-client
+        args:
+          - --host=hello-world-service
+          - --port=6543
+      restartPolicy: OnFailure
+  backoffLimit: 5
+  ttlSecondsAfterFinished: 1
+  activeDeadlineSeconds: 100
